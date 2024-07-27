@@ -1,0 +1,14 @@
+const Sequelize = require('sequelize');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const user = process.env.DB_USER;
+const password = process.env.DB_PASSWORD;
+const host = process.env.DB_HOST;
+
+const sequelize = new Sequelize('social_media', user, password, {
+    host: host,
+    dialect: 'mysql'
+});
+
+module.exports = sequelize;

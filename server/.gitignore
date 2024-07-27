@@ -1,0 +1,31 @@
+# Node.js runtime environment
+node_modules
+
+# Dependency directory
+npm-debug.log
+
+# Environment configuration
+.env
+
+# Logs
+logs
+*.log
+
+# Output of build tools
+/build
+
+# OS or editor files
+.DS_Store
+Thumbs.db
+
+# IDE workspace files
+.idea/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
