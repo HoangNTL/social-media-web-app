@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const registerUserApi = (userName: string, email: string, password: string) => {
-  const URL_API = 'http://localhost:3001/api/auth/register'
+  const URL_API = 'http://localhost:3001/api/register'
   const data = {
     userName,
     email,
@@ -11,4 +11,14 @@ const registerUserApi = (userName: string, email: string, password: string) => {
   return axios.post(URL_API, data)
 }
 
-export { registerUserApi }
+const loginUserApi = (email: string, password: string) => {
+  const URL_API = 'http://localhost:3001/api/login'
+  const data = {
+    email,
+    password
+  }
+
+  return axios.post(URL_API, data)
+}
+
+export { registerUserApi, loginUserApi }

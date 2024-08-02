@@ -1,6 +1,7 @@
 import HomePage from '../pages/Home'
 import NotFoundPage from '../pages/NotFound'
 import RegisterPage from '../pages/Auth/Register'
+import LoginPage from '../pages/Auth/Login'
 
 export const routes = [
   {
@@ -10,8 +11,11 @@ export const routes = [
   },
   {
     path: '/register',
-    page: RegisterPage,
-    isShowHeader: true
+    page: RegisterPage
+  },
+  {
+    path: '/login',
+    page: LoginPage
   },
   {
     path: '*',
