@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { loginUserApi } from '~/utils/api'
+import { getUserDetailsApi, loginUserApi } from '~/utils/api'
 
 const LoginPage = () => {
   const navigate = useNavigate()
@@ -20,7 +20,8 @@ const LoginPage = () => {
       const result = await loginUserApi(formData.email, formData.password)
       console.log(result.data)
 
-      localStorage.setItem('accessToken', result.data.accessToken)
+      const userDetails = await getUserDetailsApi()
+      console.log(userDetails.data)
       navigate('/')
     } catch (error) {
       console.error(error)
